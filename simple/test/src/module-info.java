@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author HYUN
- *
- */
-module test {
-}
