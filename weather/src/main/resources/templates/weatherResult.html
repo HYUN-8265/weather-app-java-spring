@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>날씨 결과</title>
+</head>
+<body>
+<h1>지역: <span th:text="${weather.location.name}"></span>, <span th:text="${weather.location.country}"></span></h1>
+<p>온도: <span th:text="${weather.current.temperature}"></span>°C</p>
+<p>날씨 설명: <span th:text="${weather.current.weather_descriptions[0]}"></span></p>
+<p>관측 시간: <span th:text="${weather.current.observation_time}"></span></p>
+<p>풍속: <span th:text="${weather.current.wind_speed}"></span> km/h</p>
+<p>풍향: <span th:text="${weather.current.wind_dir}"></span></p>
+<p>압력: <span th:text="${weather.current.pressure}"></span> hPa</p>
+<p>강수량: <span th:text="${weather.current.precip}"></span> mm</p>
+<p>습도: <span th:text="${weather.current.humidity}"></span>%</p>
+<p>구름의 양: <span th:text="${weather.current.cloudcover}"></span>%</p>
+<p>체감온도: <span th:text="${weather.current.feelslike}"></span>°C</p>
+<p>자외선 지수: <span th:text="${weather.current.uv_index}"></span></p>
+<p>가시성: <span th:text="${weather.current.visibility}"></span> km</p>
+<p>낮/밤: <span th:text="${weather.current.is_day == 'yes' ? '낮' : '밤'}"></span></p>
+</body>
+</html>
